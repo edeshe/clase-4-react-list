@@ -1,14 +1,29 @@
+import {
+    Card,
+    CardBody,
+    Image,
+    Stack,
+    Heading,
+    Divider
+} from "@chakra-ui/react";
+
 import props from "./props";
 
 const Character = ({id, name, image, episode}) => {
     return (
-        <>
-            <h1>{name}</h1>
-            <img src={image} alt={name} />
-            {episode.map((url, index) => (
-                <div>{index + 1}: <a href={url}>{url}</a></div>
-            ))}
-        </>
+        <Card>
+            <CardBody>
+            <Image
+                src={image}
+                alt={name}
+                borderRadius='lg'
+                />
+            <Stack mt='6' spacing='3'>
+                <Heading size='md'>{name}</Heading>
+            </Stack>
+            </CardBody>
+            <Divider />
+        </Card>
     );
 };
 
