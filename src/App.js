@@ -1,24 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import Character from "./components/Character";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Character
+        name="Unknow"
+        image="https://repository-images.githubusercontent.com/120371205/b6740400-92d4-11ea-8a13-d5f6e0558e9b"
+        episode={[
+          "https://rickandmortyapi.com/api/episode/1",
+          "https://rickandmortyapi.com/api/episode/2", 
+        ]}
+      />
+    </>
   );
 }
 
