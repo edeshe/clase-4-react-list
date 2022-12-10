@@ -1,12 +1,12 @@
 import { ChakraProvider } from '@chakra-ui/react'
 
-import Character from "./components/character";
+import CharactersPage from './components/pages/characters/CharactersPage';
 
 function App() {
   return (
     <ChakraProvider>
-      <Character
-        id={1}
+      <CharactersPage
+        ids={[1, 2, 3, 4, 5]}
       />
     </ChakraProvider>
   );
