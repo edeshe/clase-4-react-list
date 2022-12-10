@@ -1,3 +1,5 @@
+import props from "./props";
+
 const Character = ({id, name, image, episode}) => {
     return (
         <>
@@ -8,6 +10,9 @@ const Character = ({id, name, image, episode}) => {
             ))}
         </>
     );
-}
+};
+
+Character.propTypes = props.propTypes;
+Character.defaultProps = props.defaultProps;
 
 export default Character;
